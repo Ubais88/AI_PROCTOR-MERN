@@ -12,7 +12,7 @@ const NumberOfQuestions = ({ questionLength, submitTest, cQuestions }) => {
     rows.push(questionNumbers.slice(i, i + 5));
   }
 
-  const [timer, setTimer] = useState(120); 
+  const [timer, setTimer] = useState(600); 
 
   useEffect(() => {
     const countdown = setInterval(() => {
