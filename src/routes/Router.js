@@ -18,6 +18,7 @@ import ExamLogPage from './../views/teacher/ExamLogPage';
 import AddQuestions from './../views/teacher/AddQuestions';
 import PrivateRoute from 'src/views/authentication/PrivateRoute';
 import TeacherRoute from 'src/views/authentication/TeacherRoute';
+import Profile from 'src/layouts/full/header/Profile';
 
 const Router = createBrowserRouter(
   createRoutesFromElements(
@@ -42,10 +43,11 @@ const Router = createBrowserRouter(
           <Route path="exam/:examId" exact={true} element={<ExamDetails />} />
           <Route path="exam/:examId/:testId" exact={true} element={<TestPage />} />
         </Route>
-      </Route>
+      </Route> 
       {/* User layout */}
       <Route path="/user" element={<FullLayout />}>
         <Route path="account" exact={true} element={<UserAccount />} />
+        {/* <Route path="profile" exact={true} element={<Profile />} /> */}
       </Route>
 
       {/* Authentication layout */}
